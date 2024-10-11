@@ -8,7 +8,7 @@ hog = cv2.HOGDescriptor()
 hog.setSVMDetector(cv2.HOGDescriptor_getDefaultPeopleDetector())
 
 # Webkamera megnyitása
-cap = cv2.VideoCapture(0)
+cap = cv2.VideoCapture(2)
 
 # Állapotváltozó, hogy csak egyszer írja ki a "szia" üzenetet
 detected = False
@@ -56,7 +56,7 @@ while True:
     cv2.imshow('Video', frame)
 
     #Csak akkor kapcsol ki a led ha 60 másodpercig nem érzékelt senkit
-    if when_turn_on+60 < time():
+    if when_turn_on+15 < time():
         led(10)
         led_on = False
         

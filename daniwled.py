@@ -2,7 +2,7 @@ import requests
 from time import sleep
 import json
 
-wled_device_ip = "[your wled device ip]"
+wled_device_ip = "[your wled ip]"
 api_endpoint = f"http://{wled_device_ip}/json/state"
 
 def wled(bright):
