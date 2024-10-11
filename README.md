@@ -1,5 +1,5 @@
 # Telepítés linuxon:
-1.virtuális környezet létrehozása
+1. virtuális környezet létrehozása
 
 
 ```python3 -m venv myenv```
