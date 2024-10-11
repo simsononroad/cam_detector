@@ -14,6 +14,10 @@
 ```pip3 install opencv-python```
 
 
+
+3. VSCode újraindítása
+
+
 4. Megnézni hogy sikeresen letöltődött
 ```
 python3
