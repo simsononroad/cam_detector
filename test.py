@@ -1,5 +1,7 @@
 import time
+from datetime import datetime
 
+now = datetime.now()
 
 def light_dark():
     """acth = time.localtime()[3]
@@ -19,5 +21,9 @@ def light_dark():
     elif act <= napkelte:
         print("Sötét van")
 
+
+def nowtime():
+    print(f"Time: {now.hour}:{now.minute + 1}:{now.second}")
+
 if __name__ == "__main__":
-    light_dark()
+    nowtime()

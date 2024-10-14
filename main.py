@@ -2,13 +2,17 @@ import cv2
 import requests
 from time import sleep, time, ctime
 from daniwled import wled as led
+from os import system as cmd
+from datetime import datetime
+
+now = datetime.now()
 
 # HOG alapú emberi alak detektor betöltése
 hog = cv2.HOGDescriptor()
 hog.setSVMDetector(cv2.HOGDescriptor_getDefaultPeopleDetector())
 
 # Webkamera megnyitása
-cap = cv2.VideoCapture(2)
+cap = cv2.VideoCapture(0)
 
 # Állapotváltozó, hogy csak egyszer írja ki a "szia" üzenetet
 detected = False
@@ -34,7 +38,8 @@ while True:
         if i >= 0.7:
             detected = True
             when_turn_on = time()
-            print(f"Ember érzékelve: {len(human_boxes)} [{valoszinuseg}]")
+            cmd("clear")
+            print(f"Ember érzékelve: {len(human_boxes)}, valószínüség: [{valoszinuseg}]. Ekkor: {ctime()}. A led ki fog kapcsolni ekkor: {now.hour}:{now.minute}:{now.second+60}")
             break
 
     
@@ -43,20 +48,13 @@ while True:
         if not led_on:
             led(255)
             led_on = True
-
-
-    # Ha talál emberi alakot, keretezd be
-    if detected:
-        for (x, y, w, h) in human_boxes:
-            # Emberi alak keretezése
-            cv2.rectangle(frame, (x, y), (x + w, y + h), (0, 255, 0), 2)
         
 
     # Kép megjelenítése
-    cv2.imshow('Video', frame)
+    #cv2.imshow('Video', frame)
 
     #Csak akkor kapcsol ki a led ha 60 másodpercig nem érzékelt senkit
-    if when_turn_on+15 < time():
+    if when_turn_on+60 < time():
         led(10)
         led_on = False
         

@@ -3,16 +3,21 @@
 1. virtuális környezet létrehozása
 
 
-```python3 -m venv myenv```
+`python3 -m venv myenv`
 
 
-```source myenv/bin/activate```
+`source myenv/bin/activate`
 
 
 2. OpenCV telepítése
 
    
-```pip3 install opencv-python```
+`pip3 install opencv-python`
+
+
+3. Mi a wled IP-ja?
+
+Írd be a terminálba: `host [your wled domain]`
 
 
 
@@ -32,23 +37,28 @@ python3
 1. Create a virtual enviroment
 
 
-```python3 -m venv myenv```
+`python3 -m venv myenv`
 
 
-```source myenv/bin/activate```
+`source myenv/bin/activate`
 
 
 2. install OpenCV
 
    
-```pip3 install opencv-python```
+
+`pip3 install opencv-python`
+
+3. What is your wled ip
+
+Write to your terminal: `host [your wled domain]`
 
 
 
-3. Restart the VSCode
+4. Restart the VSCode
 
 
-4. Check that it has been downloaded successfully
+5. Check that it has been downloaded successfully
 ```
 python3
 >>>import cv2
