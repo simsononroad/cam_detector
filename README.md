@@ -70,5 +70,5 @@ python3
 ```
 
 6. Download files:
-    I. go to the folder in terminal where you want to download the files
-    II. paste this command to terminal `git clone https://github.com/simsononroad/cam_detector.git`
+    1. go to the folder in terminal where you want to download the files
+    2. paste this command to terminal `git clone https://github.com/simsononroad/cam_detector.git`
