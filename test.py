@@ -23,7 +23,11 @@ def light_dark():
 
 
 def nowtime():
-    print(f"Time: {now.hour}:{now.minute + 1}:{now.second}")
+    ido = 0
+    for i in range(60):
+        ido += 1
+        nowm = now.minute + ido 
+    print(f"Time: {now.hour}:{nowm}:{now.second}")
 
 if __name__ == "__main__":
     nowtime()

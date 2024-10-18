@@ -34,12 +34,15 @@ while True:
     detected = False
 
     #Ember detektálása ha 0.7nél nagyobb valószínűséggel ember
+    ido = 0
+    mekkora_az_eselye_h_ember = 1
+    mennyi_ido_mulva_alljon_le = 60
     for i in valoszinuseg:
-        if i >= 0.7:
+        if i >= mekkora_az_eselye_h_ember:
             detected = True
             when_turn_on = time()
             cmd("clear")
-            print(f"Ember érzékelve: {len(human_boxes)}, valószínüség: [{valoszinuseg}]. Ekkor: {ctime()}. A led ki fog kapcsolni ekkor: {now.hour}:{now.minute}:{now.second+60}")
+            print(f"Ember érzékelve: {len(human_boxes)}, valószínüség: [{valoszinuseg}]. Ekkor: {ctime()}.")
             break
 
     
@@ -54,7 +57,7 @@ while True:
     #cv2.imshow('Video', frame)
 
     #Csak akkor kapcsol ki a led ha 60 másodpercig nem érzékelt senkit
-    if when_turn_on+60 < time():
+    if when_turn_on+mennyi_ido_mulva_alljon_le < time():
         led(10)
         led_on = False
         
