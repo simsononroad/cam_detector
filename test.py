@@ -1,5 +1,6 @@
 import time
 from datetime import datetime
+from os import system as cmd
 
 now = datetime.now()
 
@@ -29,5 +30,17 @@ def nowtime():
         nowm = now.minute + ido 
     print(f"Time: {now.hour}:{nowm}:{now.second}")
 
+
+def tryExcept():
+        try:
+            print("tes")
+            time.sleep(10)
+        except KeyboardInterrupt:
+            down_counter = 3
+            cmd("clear")
+            for i in range(3, 0, -1):
+                time.sleep(1)
+                print(f"A program {i} másodperc múlva le fog állni")
+
 if __name__ == "__main__":
-    nowtime()
+    tryExcept()
