@@ -21,15 +21,19 @@
 
 
 
-3. VSCode újraindítása
+4. VSCode újraindítása
 
 
-4. Megnézni hogy sikeresen letöltődött
+5. Megnézni hogy sikeresen letöltődött
 ```
 python3
 >>>import cv2
 >>>print(cv2.__version__)
 ```
+
+6. Fájlok letöltése:
+    1. Menj be abba a mappába (a terminálban) ahova be akarod illeszteni
+    2. írd be ezt a parancsot `git clone https://github.com/simsononroad/cam_detector.git`
 
 
 # English
@@ -64,3 +68,7 @@ python3
 >>>import cv2
 >>>print(cv2.__version__)
 ```
+
+6. Download files:
+    1. go to the folder in terminal where you want to download the files
+    2. paste this command to terminal `git clone https://github.com/simsononroad/cam_detector.git`
