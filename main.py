@@ -18,7 +18,24 @@ cap = cv2.VideoCapture(0)
 detected = False
 led_on = False
 when_turn_on = 0
-leallas_kiirasa = False
+when_stop_mp = 2
+ido = 0
+mekkora_az_eselye_h_ember = 1.6
+mennyi_ido_mulva_alljon_le = 60
+
+
+
+def stop():
+    down_counter = when_stop_mp
+    cmd("clear")
+    for i in range(when_stop_mp, 0, -1):
+        sleep(1)
+        print(f"A program {i} másodperc múlva le fog állni")
+        sleep(1)
+        exit()
+
+
+print("Az alkalmazást a ctrl+c segítségével tudod bezárni vagy az exit parancsal")
 try:
     while True:
         # Kép beolvasása
@@ -36,15 +53,16 @@ try:
         detected = False
 
         #Ember detektálása ha 0.7nél nagyobb valószínűséggel ember
-        ido = 0
-        mekkora_az_eselye_h_ember = 1
-        mennyi_ido_mulva_alljon_le = 60
+
         for i in valoszinuseg:
             if i >= mekkora_az_eselye_h_ember:
                 detected = True
                 when_turn_on = time()
                 cmd("clear")
                 print(f"Ember érzékelve: {len(human_boxes)}, valószínüség: [{valoszinuseg}]. Ekkor: {ctime()}.")
+                kilep = input("")
+                if kilep == "exit":
+                    stop()
                 break
 
         
@@ -68,11 +86,7 @@ try:
         if cv2.waitKey(1) & 0xFF == ord('q'):
             break
 except KeyboardInterrupt:
-    down_counter = 3
-    cmd("clear")
-    for i in range(3, 0, -1):
-        sleep(1)
-        print(f"A program {i} másodperc múlva le fog állni")
+    stop()
 
 # Kamera és ablakok bezárása
 cap.release()
