@@ -24,7 +24,6 @@ mekkora_az_eselye_h_ember = 1.6
 mennyi_ido_mulva_alljon_le = 60
 
 
-
 def stop():
     down_counter = when_stop_mp
     cmd("clear")
