@@ -8,20 +8,14 @@
 
 
 2. OpenCV és requests telepítése
-
-   
-        ```
-        pip3 install opencv-python
-        pip3 install requests
-        ```
-
-
+  ```
+  pip3 install opencv-python
+  pip3 install requests
+  ```
+        
 3. Mi a wled IP-ja?
 
-        Írd be a terminálba: `host [your wled domain]`
-
-
-
+      Írd be a terminálba: `host [your wled domain]`
 4. VSCode újraindítása
 
 
@@ -47,17 +41,13 @@ python3
 
 
 2. install OpenCV and requests
-
-   
-
-        ```
-        pip3 install opencv-python
-        pip3 install requests
-        ```
-
+  ```
+  pip3 install opencv-python
+  pip3 install requests
+  ```
 3. What is your wled ip
 
-        Write to your terminal: `host [your wled domain]`
+      Write to your terminal: `host [your wled domain]`
 
 
 
