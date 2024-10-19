@@ -3,16 +3,17 @@
 1. virtuális környezet létrehozása
 
 
-`python3 -m venv myenv`
-
-
-`source myenv/bin/activate`
+    `python3 -m venv myenv`
+    `source myenv/bin/activate`
 
 
 2. OpenCV és requests telepítése
 
    
-```pip3 install opencv-python  pip3 install opencv-python```
+```
+pip3 install opencv-python
+pip3 install opencv-python
+```
 
 
 3. Mi a wled IP-ja?
@@ -51,11 +52,14 @@ python3
 
    
 
-```pip3 install opencv-python  pip3 install opencv-python```
+```
+pip3 install opencv-python
+pip3 install opencv-python
+```
 
 3. What is your wled ip
 
-    Write to your terminal: `host [your wled domain]`
+        Write to your terminal: `host [your wled domain]`
 
 
 
