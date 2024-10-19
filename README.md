@@ -10,10 +10,10 @@
 2. OpenCV és requests telepítése
 
    
-```
-pip3 install opencv-python
-pip3 install opencv-python
-```
+        ```
+        pip3 install opencv-python
+        pip3 install requests
+        ```
 
 
 3. Mi a wled IP-ja?
@@ -42,20 +42,18 @@ python3
 1. Create a virtual enviroment
 
 
-`python3 -m venv myenv`
-
-
-`source myenv/bin/activate`
+    `python3 -m venv myenv`
+    `source myenv/bin/activate`
 
 
 2. install OpenCV and requests
 
    
 
-```
-pip3 install opencv-python
-pip3 install opencv-python
-```
+        ```
+        pip3 install opencv-python
+        pip3 install requests
+        ```
 
 3. What is your wled ip
 
